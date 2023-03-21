@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Z index par kam krne ke lia perspective */
+    perspective: 10px ;
+}
+.header-page{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+.bg-img, .fg-img{
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+    z-index: -1; 
+    object-fit: cover;    
+}
+.header-page .bg-img{
+    transform: translateZ(-35px) scale(5);
+    
+}
+.header-page .fg-img{
+    transform: translateZ(-20px) scale(3.3);
+}
+.header-page h1{
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size:10rem;
+    letter-spacing:0.15rem;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0,0.3);
+    
+}
+section{
+    background-color:rgb(45,45,45);
+    color: white;
+    padding: 5rem;
+}
+.sHeading{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+.desk{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-60%);
+    color: black;
+     
+}
+.bg1{
+    background-image: url(./img/assets/sport-1.jpg);
+}
+.bg2{
+    background-image: url(./img/assets/sport-2.jpg);
+}
+.bg3{
+    background-image: url(./img/assets/sport-3.jpg);
+}
+
+
+.bg{
+   position: relative; 
+   width: 100%;
+   background-attachment: fixed;
+   background-size: cover;
+   background-position: center;
+   height: 500px;
+}
